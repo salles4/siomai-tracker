@@ -3,12 +3,12 @@
   "name": "Siomai Tracker",
   "icons": [
     {
-      "src": "./public/logo_96.png",
+      "src": "./logo_96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "./public/logo_512.png",
+      "src": "./logo_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -18,13 +18,13 @@
   "theme_color": "#dc2626",
   "screenshots": [
     {
-      "src": "/public/ss_wide.png",
+      "src": "./ss_wide.png",
       "type": "image/png",
       "sizes": "1364x628",
       "form_factor": "wide"
     },
     {
-      "src": "/public/ss_not_wide.png",
+      "src": "//ss_not_wide.png",
       "type": "image/png",
       "sizes": "380x846",
       "form_factor": "narrow"
