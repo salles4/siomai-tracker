@@ -1,6 +1,7 @@
 {
   "short_name": "Siomai",
   "name": "Siomai Tracker",
+  "description": "Track business profit and expenses through this simple app.",
   "icons": [
     {
       "src": "./logo_96.png",
@@ -13,7 +14,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/#/",
+  "start_url": "/siomai-tracker/",
   "display": "standalone",
   "theme_color": "#dc2626",
   "screenshots": [
@@ -24,7 +25,7 @@
       "form_factor": "wide"
     },
     {
-      "src": "//ss_not_wide.png",
+      "src": "./ss_not_wide.png",
       "type": "image/png",
       "sizes": "380x846",
       "form_factor": "narrow"

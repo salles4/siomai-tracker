@@ -1,9 +1,11 @@
 <script>
   import { pop } from "svelte-spa-router";
   import Title from "../lib/Title.svelte";
+  import { fade } from "svelte/transition";
 </script>
 
 <main
+  in:fade={{duration:500}}
   class="min-h-[90vh] bg-base-200 flex flex-col justify-center items-center"
 >
   <Title title="Add Expenses" />

@@ -1,5 +1,5 @@
 <script>
-  import Router from "svelte-spa-router";
+  import Router, { pop } from "svelte-spa-router";
   import Home from "./pages/Home.svelte";
   import Revenue from "./pages/Revenue.svelte";
   import Expenses from "./pages/Expenses.svelte";
@@ -7,25 +7,31 @@
   import AddExpenses from "./pages/AddExpenses.svelte";
 
   import { location } from "svelte-spa-router";
+  import Navbar from "./lib/Navbar.svelte";
   
   let logoClass = "h-[40vh]"
   let imgSize = "h-36"
+  let sideLogoClass = "hidden"
+  let colNum = "1"
 
   $: if($location == "/"){
-    logoClass = "h-[40vh]"
+    logoClass = "h-[40dvh]"
     imgSize = "h-36"
+    sideLogoClass = "hidden"
+    colNum = "1"
   }else{
-    logoClass = "h-[10vh]"
+    logoClass = "h-auto"
     imgSize = "h-12"
+    sideLogoClass = "block"
+    colNum = "3"
   }
 
 
 </script>
 
-<div class="flex flex-col justify-end items-center bg-base-200 transition-all ease-in-out duration-700 {logoClass}">
-  <img src="./2024logo.png" alt="" class="transition-all ease-in-out duration-700 {imgSize}" />
-  <p class="font-bold">July 2024 Report</p>
-</div>
+{#if $location != "/"}
+  <Navbar />
+{/if}
 <Router routes={{
   '/': Home,
   '/revenue': Revenue,
