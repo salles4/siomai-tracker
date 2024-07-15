@@ -2,21 +2,33 @@
   import { pop } from "svelte-spa-router";
   import Title from "../lib/Title.svelte";
   import { fade } from "svelte/transition";
+  import Navbar from "../lib/Navbar.svelte";
+  import Revenue from "./Revenue.svelte";
+  import Label from "../lib/Label.svelte";
 </script>
 
+<Navbar title="Add Revenue" />
 <main
   in:fade={{ duration: 500 }}
-  class="min-h-[90vh] bg-base-200 flex flex-col justify-center items-center"
+  class="bg-base-200 grid justify-center items-center md:px-0"
 >
-  <Title title="Add Revenue" />
-  <input
-    type="file"
-    accept="image/*"
-    capture
-    class="file-input w-full max-w-xs"
-  />
-  <label class="input input-bordered flex items-center gap-4 my-2">
-    Name
-    <input type="text" class="grow" placeholder="Daisy" />
-  </label>
+  <Label label="Date">
+    <input
+      type="date"
+      class="input input-bordered w-full"
+      placeholder="Date"
+      value={new Date()}
+    />
+  </Label>
+  <Label label="Picture">
+    <input
+      type="file"
+      accept="image/*"
+      capture
+      class="file-input w-full"
+    />
+  </Label>
+  <Label label="Name">
+    <input type="text" class="input w-full input-bordered" placeholder="Daisy" />
+  </Label>
 </main>

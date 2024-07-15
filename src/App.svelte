@@ -8,6 +8,8 @@
 
   import { location } from "svelte-spa-router";
   import Navbar from "./lib/Navbar.svelte";
+  import RevenueDetails from "./pages/RevenueDetails.svelte";
+  import ExpensesDetails from "./pages/ExpensesDetails.svelte";
   
   let logoClass = "h-[40vh]"
   let imgSize = "h-36"
@@ -28,15 +30,12 @@
 
 
 </script>
-
-{#if $location != "/"}
-  <Navbar />
-{/if}
 <Router routes={{
   '/': Home,
   '/revenue': Revenue,
   '/expenses': Expenses,
   '/add-revenue': AddRevenue,
   '/add-expenses': AddExpenses,
-
+  '/revenue/:id': RevenueDetails,
+  '/expenses/:id': ExpensesDetails,
 }} />

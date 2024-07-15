@@ -1,11 +1,12 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
   import Stats from "../lib/Stats.svelte";
+  import { cubicInOut } from "svelte/easing";
 
   window.scrollTo(0, document.body.scrollHeight);
 </script>
 
-<main in:fade={{ duration: 500 }}>
+<main in:fly|fade={{duration:500, y:100, easing:cubicInOut}}>
   <div class="justify-around h-[100dvh] items-center flex flex-col">
     <div class="flex flex-col justify-center items-center">
       <img
