@@ -33,7 +33,7 @@
 <!-- modal -->
 <input type="checkbox" id="my_modal_6" class="modal-toggle" />
 <div class="modal modal-bottom" role="dialog">
-  <div class="modal-box md:w-[40%] sm:w-auto place-self-center self-end">
+  <div class="modal-box md:w-[500px] w-[100%] place-self-center self-end">
     <div class="w-[100%] flex justify-around">
       <a href="./#/add-revenue">
         <button class="btn btn-primary btn-outline size-32 flex flex-col">
